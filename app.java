@@ -9,7 +9,9 @@ public class app {
 		taxOnMe.calls.add(customer1.CallCompany());
 		Car car = new Car("45626254",CarModel.nissan);
 		car.AddDefaultSeats();
+		Driver driver1 = new Driver(36546421, "Joseph", "ashrafieh", "961785365420", "123456" , car);
 		System.out.println(car);
+		System.out.println(driver1);
 		int count = 0;
 //		while (true) {
 //			if (taxOnMe.getCallSize() == 0) {
