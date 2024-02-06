@@ -5,7 +5,6 @@ public class Driver extends employee{
 	private Car car;
 	private List<Order> OnGoingOrders;
 	
-	
 	public Driver(int ID, String name, String address, String phone, String LicenseNumber, Car car) {
 		super(ID, name, address, phone);
 		this.LicenseNumber = LicenseNumber;

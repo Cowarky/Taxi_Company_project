@@ -5,11 +5,12 @@ public class Order {
     private Seat seat;
     private employee employeeTakenCareOf;
 
-    public Order(int ID, Customer customer, Car car, Seat seat) {
+    public Order(int ID, Customer customer, Car car, Seat seat, employee Employee) {
         this.ID = ID;
         this.customer = customer;
         this.car = car;
         this.seat = seat;
+        this.employeeTakenCareOf = Employee;
     }
 
     // Getters and setters for all attributes

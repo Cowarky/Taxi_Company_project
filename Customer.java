@@ -4,6 +4,7 @@ public class Customer extends Person{
 	private String pickupLocation;
 	private Boolean isUrgent;
     private Company company;
+    public Boolean isCalling;
 	
 	public Customer(int ID, String name, String address, String phone, String destination, String pickupLocation,
 			Boolean isUrgent) {
@@ -34,7 +35,16 @@ public class Customer extends Person{
 	public Call CallCompany() {
 		Call call = new Call(super.getPhone(), company.getContactDetails());
 		company.ReceiveCall(call);
+		isCalling = true;
 		return call;
+	}
+	public void TakeOrder(Call call, Customer cust, Seat seat,employee emp, Car car) {
+		if (!isCalling) {
+			System.out.println("You must call before ordering");
+			return;
+		}
+		Order order = new Order(45422312, cust,car , seat, emp );
+		
 	}
 	
 }
