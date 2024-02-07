@@ -6,6 +6,8 @@ public class Company implements CallCenter {
     private int totalOrdersHandled;
     private List<Order> orders;
     private List<Car> cars;
+    private List<Customer> customers;
+    private List<employee> Employee;
     private String location;
     private String contactDetails;
     public List<Call> calls;
@@ -21,6 +23,8 @@ public class Company implements CallCenter {
         this.orders = new ArrayList<>();
         this.cars = new ArrayList<>();
         calls = new ArrayList<>();
+        this.customers = new ArrayList<>();
+        this.Employee = new ArrayList<>();
     }
 
     // Methods to add and remove cars
@@ -66,15 +70,24 @@ public class Company implements CallCenter {
 	@Override
 	public void ReceiveCall(Call call) {
 		calls.add(call);
+		Customer cust = new Customer(call.getCallerNumber());
+		customers.add(cust);
+		String employeeHandlingCall = call.getReceiverNumber();
+		employee HandlingCall;
+		for (employee emp : Employee) {
+		    if (emp.getPhone()==employeeHandlingCall) {
+		    	HandlingCall = emp;
+		    }				    	
+		}
 	}
+//	
+//	public Call IdentifyTheCaller(Call call) {
+//		
+//	}
 
 	@Override
 	public void OrderCar(Car car) {
 		// TODO Auto-generated method stub
-		
-	}
-		// Call center
-	public void main(String[] args) {
 		
 	}
 

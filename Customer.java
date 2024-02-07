@@ -14,6 +14,11 @@ public class Customer extends Person{
 		this.isUrgent = isUrgent;
 		company = new Company(5616161, "Lebanon, Beirut", "96103355533");
 	}
+	public Customer(String number) {
+		super.phone = number;
+		System.out.println("caller number: "+number);
+	}
+	
 	public String getDestination() {
 		return destination;
 	}
